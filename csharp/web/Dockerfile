@@ -1,12 +1,3 @@
+FROM microsoft/aspnet:4.6.2
 
-FROM microsoft/aspnet
-
-RUN powershell -NoProfile -Command \
-    Import-module IISAdministration; \
-    Install-PackageProvider -Name chocolatey -Force ; \
-
-CMD ["%ALLUSERSPROFILE%\chocolatey\bin\cints", "UrlRewrite"]
-
-CMD ["iisreset"]
-
-EXPOSE 80
+ADD https://github.com/Microsoft/iis-docker/raw/d6580f65bdf060213cd8053762591ac8b5e94746/windowsservercore/ServiceMonitor.exe /
