@@ -1,2 +1,2 @@
 This Dockerfile addresses [issue #42](https://github.com/Microsoft/iis-docker/issues/42) on IIS docker images, preventing containers to be restarted.
-A new ServiceMonitor is to be added by [PR #43](https://github.com/Microsoft/iis-docker/pull/43), in the mean time, we'll added to our own Dockerfile.
+A new ServiceMonitor is to be added by [PR #43](https://github.com/Microsoft/iis-docker/pull/43), in the mean time, we'll add it to our own Dockerfile.
