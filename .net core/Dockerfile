@@ -11,7 +11,5 @@ LABEL com.genexus.name: "Genexus .NET Core for Linux" \
 
 WORKDIR /app
 
-EXPOSE 80
-
 ENTRYPOINT ["dotnet", "bin/netcoreapp1.1/GxNetCoreStartup.dll"]
 
