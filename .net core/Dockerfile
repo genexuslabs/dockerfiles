@@ -1,8 +1,8 @@
 ﻿
 FROM microsoft/aspnetcore:1.1
 
-LABEL com.genexus.name: "Genexus .NET Core for Linux" \
-      com.genexus.description: "Genexus Docker Compose file for .NET Core environments" 
+LABEL com.genexus.name: "Genexus .NET Core for Linux" 
+      com.genexus.description: "Genexus Dockerfile for .NET Core environments" 
       com.genexus.url: "http://www.genexus.com/"
       com.genexus.vcs-url: "https://github.com/genexuslabs/dockerfiles"
       com.genexus.vendor: "GeneXus"

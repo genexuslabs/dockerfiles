@@ -7,5 +7,6 @@ By default, Genexus generates a docker-compose file with official images (asp.ne
 
  - [.net Framework](./.net)
  - [.net core](./.net%20core)
- - [Java] <-- comming soon
+ - [java](./java)
 
+THESE IMAGES ARE NOT NO BE USED IN PRODUCTION ENVIRONMENTS
