@@ -1,0 +1,8 @@
+# taken from https://rimdev.io/building-net-core-on-travis-ci/
+language: ruby
+dist: trusty
+sudo: required
+services:
+ - docker
+script:
+ - docker build -f java/tomcat/Dockerfile -t gxjavatest
