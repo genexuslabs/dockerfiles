@@ -5,4 +5,4 @@ sudo: required
 services:
  - docker
 script:
- - docker build -f java/tomcat/Dockerfile -t gxjavatest
+ - docker build -f java/tomcat/Dockerfile -t gxjavatest java/tomcat
