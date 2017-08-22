@@ -1,2 +1,2 @@
-docker build -t genexus/javatomcat .
+docker build -t genexus/javatomcat ./java/tomcat
 docker push genexus/javatomcat
