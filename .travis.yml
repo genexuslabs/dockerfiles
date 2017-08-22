@@ -1,8 +1,14 @@
-# taken from https://rimdev.io/building-net-core-on-travis-ci/
 language: ruby
 dist: trusty
 sudo: required
 services:
- - docker
+- docker
+before-script:
+- docker login -u $SECRET -p $DOCKER_PASSWORD
 script:
- - docker build -f java/tomcat/Dockerfile -t gxjavatest java/tomcat
+- docker build -f java/tomcat/Dockerfile -t genexus/javatomcat:travis java/tomcat
+after-script:
+- docker push genexus/javatomcat:travis
+env:
+  global:
+    secure: ajSYYsm8f3tT8xCBp6EL6fHp/HS8gtFh+1jdkqaWonxtvMfKzxWc+IykKF32a/IYm99sPD1F6SrVn4M0rFpFizyHRYjKqaeYqGcn4GSVwX+Jnx6ry+IT3HQIgrsGaSw6ydp5WtvkeSpgVeME20+rlWZPOE5ZgQgcU+qbtaq5VWdGEI3fjMgaMjGN5TGLbNvyZ5V6FL7iHEUCr7hbokb8zALFa9vXv4eVO4DQql2adoO99AusN84BSRB1wBzqHWfejEHAmJf8OgwyhkIdHCnLuFspnkyD34VTeEGqyAkYV2RNwCV5ydzHon0y1wFPaHksdfWT4PCrH0WuNLkE+yk2F4u3SnQyLVwv0MVDDr70QC/7/QamqWERgG8TkvtZjmw+80S+j9o6rSY9YyBbfp/myl5hos2tRYcD4qvGtlpjtGqVgEoDjX59CRNqXWEwmXCqWTFm9CuElYfMCy+w5Cigtn3l9Sg8yacrYQ0nGb2o9umKEqHrA+4Zzgs5clGDnUIvEIvFmFIk2zQ/VjuF5pOdbMiOp7QKrUaJ54OhjeTGBNlm/od5A4Y3G7pKdfH1aGlr+gz3ZDCorulYOIpgrNZRrRX54g6KlzS54wGncYndh+tMn5hW11ELvceNUwV/ICWmRfxHNy6AFOXI7C4f0Q+L4rBPgoKk11//QHs01EVASHM=
