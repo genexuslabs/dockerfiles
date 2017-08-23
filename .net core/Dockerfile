@@ -1,5 +1,5 @@
 ﻿
-FROM microsoft/aspnetcore:1.1
+FROM microsoft/aspnetcore:2.0
 
 LABEL com.genexus.name="Genexus .NET Core for Linux" \
       com.genexus.description="Genexus Dockerfile for .NET Core environments" \
@@ -11,5 +11,5 @@ LABEL com.genexus.name="Genexus .NET Core for Linux" \
 
 WORKDIR /app
 
-ENTRYPOINT ["dotnet", "bin/netcoreapp1.1/GxNetCoreStartup.dll"]
+ENTRYPOINT ["dotnet", "bin/GxNetCoreStartup.dll"]
 
