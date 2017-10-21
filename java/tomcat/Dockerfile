@@ -1,8 +1,8 @@
 
 FROM tomcat:8.5-jre8-alpine
 
-LABEL com.genexus.name="Genexus Java Tomcat for Linux" \
-      com.genexus.description="Genexus Dockerfile for Java Tomcat environments" \
+LABEL com.genexus.name="GeneXus Java Tomcat for Linux" \
+      com.genexus.description="GeneXus Dockerfile for Java Tomcat environments" \
       com.genexus.url="http://www.genexus.com/" \
       com.genexus.vcs-url="https://github.com/genexuslabs/dockerfiles" \
       com.genexus.vendor="GeneXus" \

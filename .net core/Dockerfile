@@ -1,8 +1,8 @@
 ﻿
 FROM microsoft/aspnetcore:2.0
 
-LABEL com.genexus.name="Genexus .NET Core for Linux" \
-      com.genexus.description="Genexus Dockerfile for .NET Core environments" \
+LABEL com.genexus.name="GeneXus .NET Core for Linux" \
+      com.genexus.description="GeneXus Dockerfile for .NET Core environments" \
       com.genexus.url="http://www.genexus.com/" \
       com.genexus.vcs-url="https://github.com/genexuslabs/dockerfiles" \
       com.genexus.vendor="GeneXus" \

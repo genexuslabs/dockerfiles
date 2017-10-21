@@ -1,8 +1,8 @@
 
 FROM microsoft/aspnet:4.6.2
 
-LABEL com.genexus.name="Genexus .NET Web" \
-      com.genexus.description="Genexus Docker Compose file for .NET Framework environments" \
+LABEL com.genexus.name="GeneXus .NET Web" \
+      com.genexus.description="GeneXus Docker Compose file for .NET Framework environments" \
       com.genexus.url="http://www.genexus.com/" \
       com.genexus.vcs-url="https://github.com/genexuslabs/dockerfiles" \
       com.genexus.vendor="GeneXus" \
