@@ -9,4 +9,9 @@ LABEL com.genexus.name="GeneXus .NET Web" \
       com.genexus.schema-version="1.0" \
       com.genexus.maintainer="Seba Gómez <sgomez@genexus.com>"
 
-ADD https://github.com/Microsoft/iis-docker/raw/d6580f65bdf060213cd8053762591ac8b5e94746/windowsservercore/ServiceMonitor.exe /
+RUN MKDIR install
+WORKDIR /install
+ADD https://download.microsoft.com/download/C/9/E/C9E8180D-4E51-40A6-A9BF-776990D8BCA9/rewrite_amd64.msi rewrite_amd64.msi
+RUN Write-Host 'Installing URL Rewrite' ; \
+    Start-Process msiexec.exe -ArgumentList '/i', 'rewrite_amd64.msi', '/quiet', '/norestart' -NoNewWindow -Wait
+    

@@ -1,2 +1,1 @@
-This Dockerfile is based on [microsoft/aspnet:4.6.2](https://hub.docker.com/r/microsoft/aspnet/) and addresses [issue #42](https://github.com/Microsoft/iis-docker/issues/42) on IIS docker images, preventing containers to be restarted.
-A new ServiceMonitor is to be added by [PR #43](https://github.com/Microsoft/iis-docker/pull/43), in the mean time, we'll add it to our own Dockerfile.
+This Dockerfile is based on [microsoft/aspnet:4.6.2](https://hub.docker.com/r/microsoft/aspnet/) and it adds the URL Rewrite module for IIS from [here](https://download.microsoft.com/download/C/9/E/C9E8180D-4E51-40A6-A9BF-776990D8BCA9/rewrite_amd64.msi) 
