@@ -1,5 +1,5 @@
 ﻿
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM microsoft/dotnet:2.1.1-aspnetcore-runtime
 
 LABEL com.genexus.name="GeneXus .NET Core for Linux" \
       com.genexus.description="GeneXus Dockerfile for .NET Core environments" \
