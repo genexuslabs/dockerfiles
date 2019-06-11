@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - .net core/*
+
+variables:
+  netCoreImage: 'genexus/netcore:2.1.1'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: docker build --file './.net core/Dockerfile' --build-arg BUILD_DATE=$(Build.BuildNumber) -t $(netCoreImage) './.net core'
+  displayName: 'Build .NET Core image'
+

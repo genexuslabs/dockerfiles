@@ -4,11 +4,15 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - java/*
 
 variables:
   javaImage: 'genexus/javatomcat:8.5'
-  netCoreImage: 'genexus/netcore:2.1.1'
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -16,6 +20,4 @@ pool:
 steps:
 - script: docker build --file ./java/tomcat/Dockerfile --build-arg BUILD_DATE=$(Build.BuildNumber) -t $(javaImage) ./java/tomcat/
   displayName: 'Build Java image'
-- script: docker build --file './.net core/Dockerfile' --build-arg BUILD_DATE=$(Build.BuildNumber) -t $(netCoreImage) './.net core'
-  displayName: 'Build .NET Core image'
 
