@@ -13,7 +13,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: docker build --file .\java\tomcat\Dockerfile --build-arg BUILD_DATE=$today -t $javaImage .\java\tomcat\
+- script: docker build --file .\java\tomcat\Dockerfile --build-arg BUILD_DATE=$today -t $(javaImage) .\java\tomcat\
   displayName: 'Build Java image'
 
 - script: |
