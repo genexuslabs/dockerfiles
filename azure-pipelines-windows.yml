@@ -4,7 +4,12 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - .net/*
 
 variables:
   netImage: 'genexus/dotnet:4.6.2'
