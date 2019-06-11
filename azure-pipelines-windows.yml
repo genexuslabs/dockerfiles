@@ -10,7 +10,7 @@ variables:
   netImage: 'genexus/netcore:2.1.1'
 
 pool:
-  vmImage: 'vs2019'
+  vmImage: 'VS2017'
 
 steps:
 - script: docker build --file ./.net/Dockerfile --build-arg BUILD_DATE=$(Build.BuildNumber) -t $(netImage) ./.net
