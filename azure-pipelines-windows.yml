@@ -7,7 +7,7 @@ trigger:
 - master
 
 variables:
-  netImage: 'genexus/netcore:2.1.1'
+  netImage: 'genexus/dotnet:4.6.2'
 
 pool:
   vmImage: 'VS2017-Win2016'
