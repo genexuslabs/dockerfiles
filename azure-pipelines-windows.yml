@@ -1,0 +1,17 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+variables:
+  netImage: 'genexus/netcore:2.1.1'
+
+pool:
+  vmImage: 'vs2019'
+
+steps:
+- script: docker build --file ./.net/Dockerfile --build-arg BUILD_DATE=$(Build.BuildNumber) -t $(netImage) ./.net
+  displayName: 'Build .NET image'
