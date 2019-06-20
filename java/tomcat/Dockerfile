@@ -1,5 +1,5 @@
 
-FROM tomcat:8.5-jre8-alpine
+FROM tomcat:9-jre11
 
 ARG BUILD_DATE
 

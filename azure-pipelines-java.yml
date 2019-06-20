@@ -12,7 +12,7 @@ trigger:
     - java/*
 
 variables:
-  javaImage: 'genexus/javatomcat:8.5'
+  javaImage: 'genexus/javatomcat:9-jre11'
 
 pool:
   vmImage: 'ubuntu-latest'
