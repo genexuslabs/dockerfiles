@@ -2,7 +2,7 @@ $today = Get-Date
 $osType = docker info --format '{{.OSType}}'
 
 $javaImage = 'genexus/javatomcat:9-jre11'
-$netCoreImage = 'genexus/dotnetcore:2.1.1'
+$netCoreImage = 'genexus/dotnetcore:3.1'
 $netImage = 'genexus/dotnet:4.6.2'
 
 if ($osType -eq 'linux'){

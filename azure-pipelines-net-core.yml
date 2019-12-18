@@ -12,7 +12,7 @@ trigger:
     - .net core/*
 
 variables:
-  netCoreImage: 'genexus/netcore:2.1.1'
+  netCoreImage: 'genexus/dotnetcore:3.1'
 
 pool:
   vmImage: 'ubuntu-latest'
